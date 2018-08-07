@@ -1,0 +1,14 @@
+{
+    "questions": [
+ 
+        {
+            "flashCardFront": "<img src='assets/images/helicopter.png' />",
+            "flashCardBack": "Helicopter",
+            "flashCardFlipped": false,
+            "questionText": "What is this?",
+            "answers": [
+                {"answer": "Helicopter", "correct": true, "selected": false},
+                {"answer": "Plane", "correct": false, "selected": false},
+                {"answer": "Truck", "correct": false, "selected": false}
+            ]
+        },

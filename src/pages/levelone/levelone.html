@@ -1,0 +1,38 @@
+<!--
+  Generated template for the LevelonePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Level One</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div style="text-align: center;">
+  <button ion-button color="dark"  (click)='reset();'>Reset</button>
+  <button ion-button color="light" (click)='prevSlide();'> << Prev </button>
+  <button ion-button color="light" (click)='next();'>Next >></button>
+</div>
+<div style="text-align: center;">
+  <button ion-button color="danger" (click)='randomize;'> Random! </button>
+  </div>>
+  <button round ion-button  [navPush]="LevelTwo" color="dark" id="clemSChallenge-button18" style="color:#0FF53D;" class="button button-dark button-block" >Next Level</button>
+
+<ion-slides #slides *ngIf="cardSupply && cardSupply.length" (ionSlideDidChange)="slideChanged()" (ionSlideNextEnd)="nextSlide()" (ionSlidePrevEnd)="prevSlide()"
+  [initialSlide]="0">
+  <ion-slide *ngFor="let current of cardSupply">
+    <flash-card>
+      <div class="flash-card-front">{{current.front}}</div>
+      <div class="flash-card-back">{{current.back}}</div>
+    </flash-card>
+  </ion-slide>
+
+</ion-slides>
+
+</ion-content>
